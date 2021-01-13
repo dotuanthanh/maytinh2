@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CAlculator</title>
+</head>
+<body>
+<input id="hienThi" style="height: 50px;width: 200px" placeholder="Nhap phep tinh">
+<table style="width: 200px;text-align: center " border="1"  >
+    <tr>
+        <td> <input type="button" value="1" onclick="nut('1')"></td>
+        <td> <input type="button" value="2" onclick="nut('1')"></td>
+        <td> <input type="button" value="3" onclick="nut('1')"></td>
+        <td> <input type="button" value="+" onclick="nut('+')"></td>
+    </tr>
+    <tr>
+        <td> <input type="button" value="4" onclick="nut('4')"></td>
+        <td> <input type="button" value="5" onclick="nut('5')"></td>
+        <td> <input type="button" value="6" onclick="nut('6')"></td>
+        <td> <input type="button" value="-" onclick="nut('-')"></td>
+    </tr>
+    <tr>
+        <td> <input type="button" value="7" onclick="nut('7')"></td>
+        <td> <input type="button" value="8" onclick="nut('8')"></td>
+        <td> <input type="button" value="9" onclick="nut('9')"></td>
+        <td> <input type="button" value="+" onclick="nut('*')"></td>
+    </tr>
+    <tr>
+        <td> <input type="button" value="C" onclick="del ('C')"></td>
+        <td> <input type="button" value="0" onclick="nut('0')"></td>
+        <td> <input type="button" value="=" onclick="kq()"></td>
+        <td> <input type="button" value="/" onclick="nut('/')"></td>
+    </tr>
+
+</table>
+</body>
+</html>
+<script>
+    function nut(button){
+        document.getElementById('hienThi').value+=button
+
+
+    }
+    function kq(){
+        let S= eval(document.getElementById('hienThi').value)
+        document.getElementById('hienThi').value=S
+    }
+    function del(){
+        document.getElementById('hienThi').value = ''
+        }
+
+    
+</script>
